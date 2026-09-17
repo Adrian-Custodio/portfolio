@@ -69,6 +69,15 @@ export const experience: ExperienceEntry[] = [
       "Followed escalation procedures and company protocols, documenting all interactions accurately in CRM tools",
     ],
   },
+  {
+    role: "IT/Network Intern",
+    org: "Ateneo de Naga University, Network Operations and Computer Services",
+    period: "Jul 2025 - Aug 2025 (200 hours)",
+    points: [
+      "Troubleshot network connectivity issues and responded to help-desk calls from university staff and employees, resolving reports end-to-end",
+      "Performed hands-on infrastructure work, including terminating Cat6 Ethernet cables and setting up network switches",
+    ],
+  },
 ];
 
 export type EducationEntry = {
