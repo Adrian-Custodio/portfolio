@@ -1,6 +1,10 @@
 export const profile = {
   name: "Adrian Custodio",
+  initials: "AC",
   title: "SOC Analyst (Entry-Level)",
+  // one-liner used in the hero and page metadata
+  tagline:
+    "CS undergrad turning a home SOC lab into real detection and investigation skills: Wazuh, Sysmon, Atomic Red Team, MITRE ATT&CK.",
   location: "San Felipe, Naga City",
   email: "senpaileviii@gmail.com",
   phone: "+63 962 155 8395",
@@ -13,10 +17,9 @@ export const profile = {
 export const navLinks = [
   { href: "/#about", label: "about" },
   { href: "/#skills", label: "skills" },
-  { href: "/#certifications", label: "certifications" },
+  { href: "/#projects", label: "projects" },
   { href: "/#experience", label: "experience" },
-  { href: "/#education", label: "education" },
-  { href: "/projects", label: "projects" },
+  { href: "/#certifications", label: "certs" },
   { href: "/#contact", label: "contact" },
 ];
 
@@ -103,6 +106,7 @@ export type Project = {
   slug: string;
   name: string;
   summary: string;
+  kind: string; // short label shown on the card, e.g. "lab", "tool"
   deployment?: string;
   stack: string[];
   href?: string;
@@ -115,6 +119,7 @@ export const projects: Project[] = [
   {
     slug: "wazuh-soc-lab",
     name: "Home SOC Detection Lab",
+    kind: "lab",
     summary:
       "Self-built SOC lab simulating a detect-and-investigate workflow: Wazuh SIEM monitoring a Windows endpoint via Sysmon, attacked with Atomic Red Team techniques mapped to MITRE ATT&CK.",
     stack: ["Wazuh", "Sysmon", "Atomic Red Team", "MITRE ATT&CK", "VirtualBox"],
@@ -123,6 +128,7 @@ export const projects: Project[] = [
   {
     slug: "steganalysis",
     name: "Steganalysis Detection Tool",
+    kind: "tool",
     summary:
       "Upload a PNG/BMP image and it flags likely LSB (least-significant-bit) steganography using two statistical methods, chi-square attack and RS analysis, returning a clean/suspicious/likely-stego verdict for each.",
     deployment:
